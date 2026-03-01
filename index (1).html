@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rede Mitic - Loja Oficial</title>
+
+<style>
+
+body{
+  margin:0;
+  padding-top:80px;
+  font-family:Arial, sans-serif;
+  color:white;
+  overflow-x:hidden;
+  background:linear-gradient(-45deg,#140022,#2b0066,#1a0033,#3d007a);
+  background-size:400% 400%;
+  animation:gradiente 12s ease infinite;
+}
+
+@keyframes gradiente{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* MENU */
+.menu{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(20,0,40,0.95);
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 0 20px #a020f0;
+  z-index:1000;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+}
+
+.menu a:hover{
+  color:#d580ff;
+}
+
+.logo{
+  font-size:18px;
+  color:#d580ff;
+  font-weight:bold;
+}
+
+/* SEÇÕES */
+.section{
+  padding:40px 20px;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.card{
+  background:rgba(31,0,61,0.9);
+  padding:20px;
+  width:280px;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(160,32,240,0.4);
+}
+
+.price{
+  color:#00ffcc;
+  margin:10px 0;
+  font-weight:bold;
+}
+
+.btn{
+  background:linear-gradient(45deg,#a020f0,#d580ff);
+  padding:12px 25px;
+  border-radius:10px;
+  color:white;
+  border:none;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.btn:hover{
+  transform:scale(1.07);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  .cards{
+    flex-direction:column;
+    align-items:center;
+  }
+  .card{
+    width:90%;
+  }
+}
+
+</style>
+
+<script>
+function comprar(produto, valor) {
+  var comando = "/sonhos pagar user:@xing_lingzn quantity:" + valor;
+  navigator.clipboard.writeText(comando);
+  alert("✅ Produto: " + produto +
+        "\n💰 Valor: " + valor + " Sonhos" +
+        "\n\n📋 Comando copiado! Cole no Discord.");
+}
+
+function copiarIP() {
+  var ip = "redemitic.aternos.me";
+  navigator.clipboard.writeText(ip);
+  alert("🌍 IP copiado: " + ip);
+}
+</script>
+
+</head>
+
+<body>
+
+<nav class="menu">
+  <div class="logo">💜 Mitic Flux </div>
+
+  <div class="menu-links">
+    <a href="index.html">Loja</a>
+    <a href="regras.html">Regras</a>
+    <a href="novidades.html">Novidades</a>
+    <a href="ip.html">IP</a>
+  </div>
+
+  <div class="menu-spacer"></div> <!-- Isso garante a centralização perfeita -->
+</nav>
+
+<div class="section">
+<h1>💜 MITIC FLUX  💜</h1>
+<p>Loja Oficial - Pagamento em Sonhos 💭</p>
+
+
+
+<div class="section">
+  <h2>💎 VIPs Mensais</h2>
+  
+  <div class="cards">
+    
+    <div class="card">
+      <h3>💜 VIP Mitic</h3>
+      <p>
+        ✔ Kit exclusivo<br>
+        ✔ Tag Mitic<br>
+        ✔ 1 chave diária<br>
+        ✔ /fly no spawn<br>
+        ✔ /craft
+      </p>
+      <div class="price">R$25 / Mês</div>
+      <button class="btn" onclick="comprar('VIP Mitic',25)">Comprar</button>
+    </div>
+    
+    <div class="card">
+      <h3>✨ VIP Lendário</h3>
+      <p>
+        ✔ Kit melhorado<br>
+        ✔ Tag Lendário<br>
+        ✔ 3 chaves diárias<br>
+        ✔ /fly ilimitado<br>
+        ✔ /enderchest<br>
+        ✔ Área VIP
+      </p>
+      <div class="price">R$40 / Mês</div>
+      <button class="btn" onclick="comprar('VIP Lendário',40)">Comprar</button>
+    </div>
+    
+    <div class="card">
+      <h3>🔥 VIP Supremo</h3>
+      <p>
+        ✔ Kit OP completo<br>
+        ✔ Tag Supremo<br>
+        ✔ 5 chaves diárias<br>
+        ✔ Acesso exclusivo<br>
+        ✔ /fly permanente<br>
+        ✔ /nick<br>
+        ✔ Prioridade no suporte
+      </p>
+      <div class="price">R$68 / Mês</div>
+      <button class="btn" onclick="comprar('VIP Supremo',68)">Comprar</button>
+  </div>
+</div>
+
+<div class="section">
+  <h2>💎 VIPs Anuais</h2>
+  
+  <div class="cards">
+    
+    <div class="card">
+      <h3>💜 VIP Mitic Anual</h3>
+          <p>
+      ✔ Kit exclusivo<br>
+      ✔ Tag Mitic<br>
+      ✔ 1 chave diária<br>
+      ✔ /fly no spawn<br>
+      ✔ /craft
+    </p>
+      <div class="price">R$270 / Ano</div>
+      <button class="btn" onclick="comprar('VIP Mitic Anual',270)">Comprar</button>
+  </div>
+    
+    <div class="card">
+      <h3>✨ VIP Lendário Anual</h3>
+      <p>
+  ✔ Kit melhorado<br>
+  ✔ Tag Lendário<br>
+  ✔ 3 chaves diárias<br>
+  ✔ /fly ilimitado<br>
+  ✔ /enderchest<br>
+  ✔ Área VIP
+</p>
+      <div class="price">R$378 / Ano</div>
+      <button class="btn" onclick="comprar('VIP Lendário Anual',378)">Comprar</button>
+    </div>
+        
+<div class="card">
+      <h3>🔥 VIP Supremo Anual</h3>
+      <p>
+        ✔ Kit OP completo<br>
+        ✔ Tag Supremo<br>
+        ✔ 5 chaves diárias<br>
+        ✔ Acesso exclusivo<br>
+        ✔ /fly permanente<br>
+        ✔ /nick<br>
+        ✔ Prioridade no suporte
+      </p> <!-- O ERRO ESTAVA AQUI, AGORA ESTÁ FECHADO CORRETAMENTE -->
+      <div class="price">734,40 / Ano</div>
+      <button class="btn" onclick="comprar('VIP Supremo Anual',734)">Comprar</button>
+   </div>
+    <div class="section">
+  <h2>⚔️ Kits Especiais</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>⚔️ Kit Guerreiro</h3>
+      <p>
+        ✔ Espada Afiada V<br>
+        ✔ Armadura Proteção IV<br>
+        ✔ Arco Força III<br>
+        ✔ 16 Maçãs Douradas<br>
+        ✔ 1 Totem
+      </p>
+      <div class="price">R$30</div>
+      <button class="btn" onclick="comprar('Kit Guerreiro',30)">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>🛡 Kit Gladiador</h3>
+      <p>
+        ✔ Espada Afiada V + Fogo II<br>
+        ✔ Armadura Proteção IV Completa<br>
+        ✔ Arco Força IV<br>
+        ✔ 32 Maçãs Douradas<br>
+        ✔ 2 Totens
+      </p>
+      <div class="price">R$50</div>
+      <button class="btn" onclick="comprar('Kit Gladiador',50)">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Kit Deus da Guerra</h3>
+      <p>
+        ✔ Espada Afiada V + Fogo II<br>
+        ✔ Armadura Proteção V<br>
+        ✔ Arco Poder V<br>
+        ✔ 48 Maçãs Douradas<br>
+        ✔ 3 Totens<br>
+        ✔ Poções de Força
+      </p>
+      <div class="price">R$70</div>
+      <button class="btn" onclick="comprar('Kit Deus da Guerra',70)">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>👑 Kit Mitic Supremo</h3>
+      <p>
+        ✔ Full Netherite Encantado<br>
+        ✔ Espada Suprema V<br>
+        ✔ Arco Poder V + Chama<br>
+        ✔ 64 Maçãs Douradas<br>
+        ✔ 5 Totens<br>
+        ✔ Poções VIP<br>
+        ✔ Caixa Misteriosa
+      </p>
+      <div class="price">R$98</div>
+      <button class="btn" onclick="comprar('Kit Mitic Supremo',98)">Comprar</button>
+    </div>
+
+  </div>
